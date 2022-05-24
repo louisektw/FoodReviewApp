@@ -1,0 +1,92 @@
+[
+  {
+    "restId": 1,
+    "restName": "Tavolo",
+    "address": "Magasinsgatan 19",
+    "city": "Göteborg",
+    "priceRange": 2,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/a0/60/ef/caption.jpg"
+  },
+  {
+    "restId": 2,
+    "restName": "Totale",
+    "address": "Kristinelundsgatan 3",
+    "city": "Göteborg",
+    "priceRange": 3,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/13/8a/61/47/dukat-for-service.jpg"
+  },
+  {
+    "restId": 3,
+    "restName": "Tavolo",
+    "address": "Magasinsgatan 19",
+    "city": "Göteborg",
+    "priceRange": 2,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/a0/60/ef/caption.jpg"
+  },
+  {
+    "restId": 4,
+    "restName": "Tavolo",
+    "address": "Magasinsgatan 19",
+    "city": "Göteborg",
+    "priceRange": 2,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/a0/60/ef/caption.jpg"
+  },
+  {
+    "restId": 5,
+    "restName": "Tavolo",
+    "address": "Magasinsgatan 19",
+    "city": "Göteborg",
+    "priceRange": 2,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/a0/60/ef/caption.jpg"
+  },
+  {
+    "restId": 6,
+    "restName": "Tavolo",
+    "address": "Magasinsgatan 19",
+    "city": "Göteborg",
+    "priceRange": 2,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/a0/60/ef/caption.jpg"
+  },
+  {
+    "restId": 7,
+    "restName": "Tavolo",
+    "address": "Magasinsgatan 19",
+    "city": "Göteborg",
+    "priceRange": 2,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/a0/60/ef/caption.jpg"
+  },
+  {
+    "restId": 8,
+    "restName": "Tavolo",
+    "address": "Magasinsgatan 19",
+    "city": "Göteborg",
+    "priceRange": 2,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/a0/60/ef/caption.jpg"
+  },
+  {
+    "restId": 9,
+    "restName": "Tavolo",
+    "address": "Magasinsgatan 19",
+    "city": "Göteborg",
+    "priceRange": 2,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/a0/60/ef/caption.jpg"
+  },
+  {
+    "restId": 10,
+    "restName": "Tavolo",
+    "address": "Magasinsgatan 19",
+    "city": "Göteborg",
+    "priceRange": 2,
+    "rating": "****",
+    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/a0/60/ef/caption.jpg"
+  }
+]
