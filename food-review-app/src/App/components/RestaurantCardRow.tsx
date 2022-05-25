@@ -8,12 +8,14 @@ const RestaurantCardRow = () => {
       container
       flexWrap="nowrap"
       direction="row"
-      spacing={2}
-      
-      marginTop={10}
+      spacing={3}
+      overflow="auto"
+      marginTop={2}
+      paddingY={1}
+
     >
       {restaurants.map((restaurant) => (
-        <Grid item>
+        <Grid item >
           <RestaurantCard restaurant={restaurant} />
         </Grid>
       ))}

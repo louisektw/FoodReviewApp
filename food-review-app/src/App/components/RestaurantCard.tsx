@@ -3,13 +3,12 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
-const RestaurantCard = (restaurant: any) => {
+const RestaurantCard = (props: any) => {
   const { restId, restName, address, city, priceRange, rating, imageUrl } =
-    restaurant.restaurant;
-  console.log(restaurant.restaurant);
+    props.restaurant;
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ minWidth: 200 }}>
       <CardMedia
         component="img"
         alt="Restaurant Picture"
