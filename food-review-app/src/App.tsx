@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./App/components/Layout/MainLayout";
+import AddReview from "./App/pages/AddReview";
 import HomePage from "./App/pages/Home";
 import LoginPage from "./App/pages/Login";
 
@@ -12,6 +13,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
         <Route path="/" element={<MainLayout/>}>
           <Route index element={<HomePage />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="add-review" element={<AddReview />} />
         </Route>
       </Routes>
     </BrowserRouter>

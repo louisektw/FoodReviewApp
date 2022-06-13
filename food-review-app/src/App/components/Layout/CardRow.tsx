@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
-import restaurants from "../../restaurant-data.json";
-import RestaurantCard from "./RestaurantCard";
+import restaurants from "../../../restaurant-data.json";
+import RestaurantCard from "../RestaurantCard";
 
-const RestaurantCardRow = () => {
+const CardRow = () => {
   return (
     <Grid
       container
@@ -22,4 +22,4 @@ const RestaurantCardRow = () => {
     </Grid>
   );
 };
-export default RestaurantCardRow;
+export default CardRow;

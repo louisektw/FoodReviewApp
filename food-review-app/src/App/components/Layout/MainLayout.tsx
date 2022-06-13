@@ -3,6 +3,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 
+
+
 export interface IMainLayoutProps {}
 const MainLayout: React.FunctionComponent<IMainLayoutProps> = (props) => {
   return (
@@ -11,7 +13,7 @@ const MainLayout: React.FunctionComponent<IMainLayoutProps> = (props) => {
         <Grid item>
           <Navbar />
         </Grid>
-        <Grid item container>
+        <Grid item container marginY={"3rem"}>
           <Grid item xs={false} sm={2} />
           <Grid item xs={12} sm={8}>
             <Outlet />
