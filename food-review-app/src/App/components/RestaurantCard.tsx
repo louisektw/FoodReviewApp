@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 const RestaurantCard = (props: any) => {
-  const { restId, restName, address, city, priceRange, rating, imageUrl } =
+  const { restName, address, city, priceRange, rating, imageUrl } =
     props.restaurant;
 
   return (
@@ -21,6 +21,11 @@ const RestaurantCard = (props: any) => {
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {rating}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {address},
+          <br />
+          {city}
         </Typography>
       </CardContent>
     </Card>
