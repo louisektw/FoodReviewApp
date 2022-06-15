@@ -1,21 +1,22 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MainLayout from "./App/components/Layout/MainLayout";
-import AddReview from "./App/pages/AddReview";
-import HomePage from "./App/pages/Home";
-import LoginPage from "./App/pages/Login";
+import MainLayout from "./components/MainLayout";
+import HomePage from "./pages/Home";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "themes/theme.d";
+
 
 export interface IAppProps {}
 const App: React.FunctionComponent<IAppProps> = (props) => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout/>}>
-          <Route index element={<HomePage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="add-review" element={<AddReview />} />
-        </Route>
-      </Routes>
+      <ThemeProvider theme={theme}>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+          </Route>
+        </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   );
 };

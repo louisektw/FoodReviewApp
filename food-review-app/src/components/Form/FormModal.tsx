@@ -1,3 +1,4 @@
+import { FC } from "react";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -17,14 +18,18 @@ const style = {
   p: 4,
 };
 
-const FormModal = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+interface IFormModalProps {
+  children: React.ReactNode;
+  open: boolean;
+  handleClose: () => void;
+}
+const FormModal: FC<IFormModalProps> = ({
+  children,
+  open,
+  handleClose,
+}) => {
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -32,11 +37,8 @@ const FormModal = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            {children}
           </Typography>
         </Box>
       </Modal>

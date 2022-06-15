@@ -6,6 +6,7 @@ interface ISecondaryButtonProps {
   buttonText: string;
   onClickHandler: () => void;
   icon?: React.ReactElement;
+  type?: "submit" | "reset" | "button";
 }
 const SecondaryButton: FC<ISecondaryButtonProps> = (props) => {
   return (
@@ -15,6 +16,7 @@ const SecondaryButton: FC<ISecondaryButtonProps> = (props) => {
         variant="contained"
         color="secondary"
         endIcon={props.icon}
+        fullWidth
       >
         {props.buttonText}
       </Button>
