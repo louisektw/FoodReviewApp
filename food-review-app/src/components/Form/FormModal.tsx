@@ -6,14 +6,13 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { useState } from "react";
 
-const style = {
+const boxStyle = {
   position: "absolute" as "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "background.paper",
-  border: "2px solid #000",
   boxShadow: 24,
   p: 4,
 };
@@ -23,11 +22,7 @@ interface IFormModalProps {
   open: boolean;
   handleClose: () => void;
 }
-const FormModal: FC<IFormModalProps> = ({
-  children,
-  open,
-  handleClose,
-}) => {
+const FormModal: FC<IFormModalProps> = ({ children, open, handleClose }) => {
   return (
     <div>
       <Modal
@@ -36,7 +31,7 @@ const FormModal: FC<IFormModalProps> = ({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={boxStyle}>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {children}
           </Typography>

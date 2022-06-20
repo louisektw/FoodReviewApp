@@ -200,11 +200,7 @@ const Navbar = () => {
         </Container>
       </AppBar>
       <FormModal open={openRegister} handleClose={handleCloseRegister}>
-        <RegisterForm
-          title={t("buttons.register", {
-            ns: namespaces.pages.home,
-          })}
-        />
+        <RegisterForm />
       </FormModal>
       <FormModal open={openLogin} handleClose={handleCloseLogin}>
         <LoginForm />

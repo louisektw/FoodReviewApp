@@ -17,18 +17,38 @@ export const en = {
     },
   },
   [namespaces.pages.signin]: {
-    title: "Sign in",
-    labelUser: "Username",
-    placeholderUser: "Enter username",
+    header: "Sign in",
+    labelEmail: "Email",
     labelPassword: "Password",
-    placeholderPassword: "Enter password",
     labelRememberMe: "Remember me",
+    noAccount: "Don't have an account?",
     buttons: {
       signin: "Sign in",
     },
     links: {
       forgotPassword: "Forgot password?",
+      register: "Register",
     },
+  },
+  [namespaces.pages.register]: {
+    header: "Register",
+    caption: "Register new user",
+    labelFirstName: "First name",
+    labelLastName: "Last name",
+    labelEmail: "Email",
+    labelPhone: "Phone number",
+    labelPassword: "Password",
+    labelConfirmPassword: "Confirm password",
+    gender: "gender",
+    radioBtn: {
+      male: "male",
+      female: "female",
+      other: "other",
+    },
+    buttons: {
+      register: "Register",
+    },
+    terms: "I accept the terms and conditions."
   },
 };
 
@@ -49,17 +69,38 @@ export const sv = {
     },
   },
   [namespaces.pages.signin]: {
-    title: "Logga in",
-    labelUser: "Användarnamn",
-    placeholderUser: "Ange användarnamn",
+    header: "Logga in",
+    labelEmail: "E-post",
     labelPassword: "Lösenord",
-    placeholderPassword: "Ange lösenord",
     labelRememberMe: "Kom ihåg mig",
+    noAccount: "Har du inget konto?",
     buttons: {
       signin: "Logga in",
     },
     links: {
       forgotPassword: "Glömt lösenordet?",
+      register: "Registrera",
     },
+    
+  },
+  [namespaces.pages.register]: {
+    header: "Registrera",
+    caption: "Registrera ny användare",
+    labelFirstName: "Förnamn",
+    labelLastName: "Efternamn",
+    labelEmail: "E-post",
+    labelPassword: "Lösenord",
+    labelConfirmPassword: "Bekräfta lösenord",
+    labelPhone: "Telefonnummer",
+    gender: "Kön",
+    radioBtn: {
+      male: "Man",
+      female: "Kvinna",
+      other: "Annat",
+    },
+    buttons: {
+      register: "Registrera",
+    },
+    terms: "Jag accepterar villkoren."
   },
 };

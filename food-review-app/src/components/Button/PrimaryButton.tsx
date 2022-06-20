@@ -2,6 +2,10 @@ import { FC } from "react"
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 
+const btnStyle = {
+  margin: "0.5rem"
+}
+
 interface IPrimaryButtonProps {
     buttonText: string
     onClickHandler: () => void
@@ -10,7 +14,7 @@ interface IPrimaryButtonProps {
 const PrimaryButton:FC<IPrimaryButtonProps> = props => {
   return (
     <Stack direction="row" spacing={2}>
-      <Button onClick={props.onClickHandler} variant="contained" endIcon={props.icon}>
+      <Button style={btnStyle} onClick={props.onClickHandler} variant="contained" endIcon={props.icon}>
         {props.buttonText}
       </Button>
     </Stack>

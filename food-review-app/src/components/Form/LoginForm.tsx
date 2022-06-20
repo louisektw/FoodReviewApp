@@ -4,8 +4,10 @@ import {
   Box,
   Checkbox,
   FormControlLabel,
+  Grid,
   Link,
   Paper,
+  TextField,
   Typography,
 } from "@mui/material";
 import SecondaryButton from "components/Button/SecondaryButton";
@@ -13,7 +15,11 @@ import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { namespaces } from "../../i18n/i18n.constants";
 import "./formStyles.css";
-import FormTextField from "./FormTextField";
+import RegisterForm from "./RegisterForm";
+
+const headerStyle = {
+  marginBottom: "1rem",
+};
 
 interface ILoginFormProps {}
 
@@ -24,23 +30,32 @@ const LoginForm: FC<ILoginFormProps> = () => {
       <Avatar sx={{ bgcolor: "secondary.main" }}>
         <LockOutlinedIcon />
       </Avatar>
-      <h2>
-        {t("title", {
+      <h2 style={headerStyle}>
+        {t("header", {
           ns: namespaces.pages.signin,
         })}
       </h2>
 
       <Box component="form">
-        <FormTextField
-          label={t("labelUser", {
+        <TextField
+          id="standard-basic"
+          label={t("labelEmail", {
             ns: namespaces.pages.signin,
           })}
+          type="email"
+          variant="standard"
+          fullWidth
+          required
         />
-        <FormTextField
+        <TextField
+          id="standard-basic"
           label={t("labelPassword", {
             ns: namespaces.pages.signin,
           })}
           type="password"
+          variant="standard"
+          fullWidth
+          required
         />
       </Box>
       <FormControlLabel
@@ -61,6 +76,20 @@ const LoginForm: FC<ILoginFormProps> = () => {
       <Typography>
         <Link href="#">
           {t("links.forgotPassword", {
+            ns: namespaces.pages.signin,
+          })}
+        </Link>
+      </Typography>
+      <Typography>
+        {t("noAccount", {
+          ns: namespaces.pages.signin,
+        })}
+        <Link
+          onClick={() => {
+            <RegisterForm />;
+          }}
+        >
+          {t("links.register", {
             ns: namespaces.pages.signin,
           })}
         </Link>
