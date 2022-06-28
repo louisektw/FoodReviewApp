@@ -1,46 +1,137 @@
-using FoodReviewAPI.Models;
-using FoodReviewAPI.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FoodReviewAPI.Controllers
 {
-    [ApiController]
+    
     [Route("[controller]")]
-    public class UserController : ControllerBase { 
-        private readonly IAppUserRepository _appUserRepository;
-        public UserController(IAppUserRepository appUserRepository)
+    [ApiController]
+    public class UserController : ControllerBase
+    {
+        private readonly IUserData _userData;
+
+        public UserController(IUserData userData)
         {
-            _appUserRepository = appUserRepository;
+            _userData = userData;
         }
+
         [HttpGet]
-        public Task<IActionResult<IEnumerable<AppUser>>> GetAllUsers()
+        public async Task<IActionResult> GetAllUsers()
         {
-            return Ok(_appUserRepository.GetAllUsers());
+            try
+            {
+                return Ok(await _userData.GetAllUsers());
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
         }
-        [HttpGet("{id}")]
-        public Task<IActionResult<AppUser>> GetUserById(int id)
+
+        [HttpGet("{Guid id}")]
+        public async Task<IActionResult> GetUserById(Guid id)
         {
-            return Ok(_appUserRepository.GetUserById(id));
+            try
+            {
+                var results = await _userData.GetUserById(id);
+                return results == null ? NotFound() : Ok(results);
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
         }
+
         [HttpPost]
-        public Task<IActionResult<AppUser>> CreateUser(AppUser user)
+        public async Task<IActionResult> CreateUser(AppUser user)
         {
-            return Ok(_appUserRepository.CreateUser(user));
+            try
+            {
+                await _userData.CreateUser(user);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
         }
-        [HttpPut("{id}")]
-        public Task<IActionResult<AppUser>> UpdateUser(int id, AppUser user)
+
+        [HttpPut("{Guid id}")]
+        public async Task<IActionResult> UpdateUser(AppUser user)
         {
-            return Ok(_appUserRepository.UpdateUser(id, user));
+            try
+            {
+                await _userData.UpdateUser(user);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
         }
-        [HttpDelete("{id}")]
-        public Task<IActionResult<AppUser>> DeleteUser(int id)
+
+        [HttpDelete("{Guid id}")]
+        public async Task<IActionResult> DeleteUser(Guid id)
         {
-            return Ok(_appUserRepository.DeleteUser(id));
+            try
+            {
+                await _userData.DeleteUser(id);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
         }
-     }
+
+
+        /*      [HttpGet]
+             public async Task<IEnumerable<AppUser>> GetAllUsers() =>
+                 await _userData.GetAllUsers();
+     
+             [HttpGet("{Guid id}")]
+             public async Task<AppUser?> GetUserById(Guid id) =>
+                 await _userData.GetUserById(id);
+     
+             [HttpPost]
+             public  Task CreateUser(AppUser user) =>
+                 _userData.CreateUser(user);
+             
+             [HttpPut("{Guid id}")]
+             public Task UpdateUser(AppUser user) =>
+                 _userData.UpdateUser(user);
+             
+             [HttpDelete("{Guid id}")]
+             public async Task DeleteUser(Guid id)
+             {
+                 await _userData.DeleteUser(id);
+             }
+             
+             
+            private readonly IAppUserRepository _appUserRepository;
+             public UserController(IAppUserRepository appUserRepository)
+             {
+                 _appUserRepository = appUserRepository;
+             }
+             [HttpGet]
+             public async Task<IEnumerable<AppUser>> GetAllUsers() =>
+                 await _appUserRepository.GetAllUsers();
+     
+             [HttpGet("{Guid id}")]
+             public async Task<AppUser?> GetUserById(Guid id) =>
+                 await _appUserRepository.GetUserById(id);
+     
+             [HttpPost]
+             public async Task<AppUser> CreateUser(AppUser user) =>
+                 await _appUserRepository.CreateUser(user);
+             
+             [HttpPut("{Guid id}")]
+             public async Task<AppUser> UpdateUser(AppUser user) =>
+                 await _appUserRepository.UpdateUser(user);
+             
+             [HttpDelete("{Guid id}")]
+             public async Task DeleteUser(Guid id)
+             {
+                 await _appUserRepository.DeleteUser(id);
+             }*/
+    }
 }

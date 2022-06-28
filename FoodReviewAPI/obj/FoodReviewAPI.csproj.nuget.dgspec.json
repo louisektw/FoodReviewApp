@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/louisewegrelius/Documents/Projects/FoodReviewApp/FoodReviewAPI/FoodReviewAPI.csproj": {}
+    "/Users/louisewegrelius/Documents/RiderProjects/FoodReviewApp/FoodReviewAPI/FoodReviewAPI.csproj": {}
   },
   "projects": {
-    "/Users/louisewegrelius/Documents/Projects/FoodReviewApp/FoodReviewAPI/FoodReviewAPI.csproj": {
+    "/Users/louisewegrelius/Documents/RiderProjects/FoodReviewApp/FoodReviewAPI/FoodReviewAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/louisewegrelius/Documents/Projects/FoodReviewApp/FoodReviewAPI/FoodReviewAPI.csproj",
+        "projectUniqueName": "/Users/louisewegrelius/Documents/RiderProjects/FoodReviewApp/FoodReviewAPI/FoodReviewAPI.csproj",
         "projectName": "FoodReviewAPI",
-        "projectPath": "/Users/louisewegrelius/Documents/Projects/FoodReviewApp/FoodReviewAPI/FoodReviewAPI.csproj",
+        "projectPath": "/Users/louisewegrelius/Documents/RiderProjects/FoodReviewApp/FoodReviewAPI/FoodReviewAPI.csproj",
         "packagesPath": "/Users/louisewegrelius/.nuget/packages/",
-        "outputPath": "/Users/louisewegrelius/Documents/Projects/FoodReviewApp/FoodReviewAPI/obj/",
+        "outputPath": "/Users/louisewegrelius/Documents/RiderProjects/FoodReviewApp/FoodReviewAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/louisewegrelius/.nuget/NuGet/NuGet.Config"
@@ -49,6 +49,10 @@
             "Microsoft.AspNetCore.Mvc": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0-preview.5.22301.12, )"
             },
             "Npgsql": {
               "target": "Package",
